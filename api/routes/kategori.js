@@ -1,0 +1,10 @@
+const express = require("express");
+const { get, add, handleDelete } = require("../middleware/kategoriController");
+
+const router = express.Router();
+
+router.get("/", get);
+router.post("/add", add);
+router.delete("/delete/:id", handleDelete);
+
+module.exports = router;
